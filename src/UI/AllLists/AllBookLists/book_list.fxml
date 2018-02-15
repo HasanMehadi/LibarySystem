@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootpane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../dark-theme-style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.AllLists.AllBookLists.BookList">
+   <children>
+      <TableView fx:id="tview" layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="colID" maxWidth="500.0" minWidth="20.0" prefWidth="100.0" text="ID" />
+          <TableColumn fx:id="colTitle" maxWidth="500.0" minWidth="20.0" prefWidth="100.0" text="TITLE" />
+            <TableColumn fx:id="colAuthor" maxWidth="500.0" minWidth="20.0" prefWidth="100.0" text="AUTHOR" />
+            <TableColumn fx:id="colPublished" maxWidth="500.0" minWidth="20.0" prefWidth="100.0" text="PUBLISHED" />
+            <TableColumn fx:id="colAvialabe" maxWidth="500.0" minWidth="20.0" prefWidth="100.0" text="AVIALABE" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handlebookrefresheoption" text="Refresh" />
+                <MenuItem mnemonicParsing="false" onAction="#handlebookdeleteoption" text="Delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#handlebookediteoption" text="Edit" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>
